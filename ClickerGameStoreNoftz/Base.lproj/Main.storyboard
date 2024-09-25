@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0tu-Ah-5WC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickerGameStoreNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="MTM-se-gpr">
+                                <rect key="frame" x="0.0" y="113" width="393" height="660"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Ultimate Animal Clicker!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-jM-b6o">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="620"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-EJ-575">
+                                        <rect key="frame" x="0.0" y="627" width="393" height="33"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Go to Store!">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                            <color key="baseBackgroundColor" red="0.46113885309278346" green="0.38959148528977233" blue="0.28726064090587844" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="eaJ-QO-gW6" kind="show" identifier="storeSegue" id="KZg-LX-kkl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hSy-EJ-575" firstAttribute="width" secondItem="MTM-se-gpr" secondAttribute="width" id="3U0-vr-kha"/>
+                                    <constraint firstItem="hSy-EJ-575" firstAttribute="height" secondItem="MTM-se-gpr" secondAttribute="height" multiplier="0.05" id="Rp4-xM-ce8"/>
+                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="height" secondItem="MTM-se-gpr" secondAttribute="height" multiplier="0.05" id="XLe-Gl-omn"/>
+                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="width" secondItem="MTM-se-gpr" secondAttribute="width" id="p0M-dC-kbJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.26186487182351342" green="0.5" blue="0.21938697681449604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1to-9h-QdJ"/>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4H8-VJ-aC8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MTM-se-gpr" secondAttribute="trailing" id="6Ax-tG-RgU"/>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7JU-Wi-OVg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="8Xv-6c-wb6"/>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BSo-4Y-BBd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="CCl-Px-ZFu"/>
+                            <constraint firstAttribute="trailing" secondItem="MTM-se-gpr" secondAttribute="trailing" id="JH4-UM-cJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" constant="10" id="WHm-TH-vjp"/>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="c9s-4j-NYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="jaj-oe-bkw"/>
+                            <constraint firstItem="MTM-se-gpr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nvL-Lz-TvZ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Cqz-ay-p3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1055.7251908396945" y="3.5211267605633805"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="FMf-r9-ToT">
+            <objects>
+                <viewController id="eaJ-QO-gW6" customClass="StoreViewController" customModule="ClickerGameStoreNoftz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ngc-zt-fCv" customClass="Store">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-gf-YJc">
+                                <rect key="frame" x="66" y="59" width="261" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FRW-uZ-sLO"/>
+                        <color key="backgroundColor" red="0.26186487180000001" green="0.5" blue="0.21938697679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c0P-y2-8TY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F00-33-5ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799.2366412213739" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ICe-oB-U5c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0tu-Ah-5WC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Iv-4j-2W0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="odw-j5-U8w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hx7-yQ-tpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
 </document>
