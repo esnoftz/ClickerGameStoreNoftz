@@ -28,7 +28,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-lF-2I2">
                                         <rect key="frame" x="0.0" y="35.333333333333343" width="393" height="137"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-8D-77w">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fox Image" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-8D-77w">
                                                 <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
                                                 <gestureRecognizers/>
                                                 <connections>
@@ -188,26 +188,38 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Buy Wolf! (Price: 50 pts)">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buyWolfAction:" destination="eaJ-QO-gW6" eventType="touchUpInside" id="s0i-wQ-E3N"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn5-e0-2fe">
                                         <rect key="frame" x="0.0" y="313.66666666666669" width="393" height="137"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Buy Lion! (Price = 500 pts)">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buyLionAction:" destination="eaJ-QO-gW6" eventType="touchUpInside" id="XHC-tA-bgc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWB-SS-Vyi">
                                         <rect key="frame" x="0.0" y="482.33333333333337" width="393" height="137"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Buy Tiger! (Price = 2000 pts)">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buyTigerAction:" destination="eaJ-QO-gW6" eventType="touchUpInside" id="uNM-AK-IxQ"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzy-au-JOT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzy-au-JOT">
                                         <rect key="frame" x="0.0" y="650.66666666666663" width="393" height="34.333333333333371"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <color key="textColor" red="0.74021423969072164" green="0.11600106713156448" blue="0.081646695828663268" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -245,6 +257,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c0P-y2-8TY"/>
+                    <connections>
+                        <outlet property="buyLionButtonOutlet" destination="Wn5-e0-2fe" id="eMU-mU-Wcc"/>
+                        <outlet property="buyTigerButtonOutlet" destination="LWB-SS-Vyi" id="ugy-tS-L6O"/>
+                        <outlet property="buyWolfButtonOutlet" destination="Ght-OP-RE1" id="LcG-mw-UjC"/>
+                        <outlet property="purchaseErrorLabel" destination="Wzy-au-JOT" id="9nI-eP-hDg"/>
+                        <outlet property="storeTotalPointsTextOutlet" destination="xA1-Di-sOb" id="cbH-H6-h6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F00-33-5ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,9 +289,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fox Image" width="773" height="1024"/>
         <image name="Lock Picture" width="360" height="360"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
