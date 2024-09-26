@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,17 +16,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="MTM-se-gpr">
-                                <rect key="frame" x="0.0" y="113" width="393" height="660"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-v9-il2">
+                                <rect key="frame" x="0.0" y="133" width="393" height="685"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Ultimate Animal Clicker!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-jM-b6o">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="620"/>
-                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-lF-2I2">
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="393" height="137"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-8D-77w">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ERG-ZH-w80" appends="YES" id="YsZ-Y1-7iZ"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="tUL-K3-mn7">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="137"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="WJN-er-qcM" appends="YES" id="Cqx-Fz-5xg"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tUL-K3-mn7" firstAttribute="width" secondItem="7KA-lF-2I2" secondAttribute="width" multiplier="0.5" id="eFZ-gp-xEw"/>
+                                            <constraint firstItem="VqF-8D-77w" firstAttribute="width" secondItem="7KA-lF-2I2" secondAttribute="width" multiplier="0.5" id="xkp-5K-5Yz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCA-ro-Tba">
+                                        <rect key="frame" x="0.0" y="173.33333333333331" width="393" height="137"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-7x-x0O">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gW5-WC-gdq" appends="YES" id="cgO-v9-XmU"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="avO-5I-ycE">
+                                                <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="137"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Xgs-13-6Yn" appends="YES" id="Bcn-QA-lJT"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hJC-7x-x0O" firstAttribute="width" secondItem="iCA-ro-Tba" secondAttribute="width" multiplier="0.5" id="RfG-rp-Yvu"/>
+                                            <constraint firstItem="avO-5I-ycE" firstAttribute="width" secondItem="iCA-ro-Tba" secondAttribute="width" multiplier="0.5" id="nmo-jQ-ha2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Animals" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="grb-yH-AQv">
+                                        <rect key="frame" x="0.0" y="311.33333333333331" width="393" height="239.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total Points: 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-r2-Vnu">
+                                        <rect key="frame" x="0.0" y="552" width="393" height="68.666666666666629"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-EJ-575">
-                                        <rect key="frame" x="0.0" y="627" width="393" height="33"/>
+                                        <rect key="frame" x="0.0" y="621.66666666666663" width="393" height="63.333333333333371"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Go to Store!">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
@@ -37,35 +98,66 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hSy-EJ-575" firstAttribute="width" secondItem="MTM-se-gpr" secondAttribute="width" id="3U0-vr-kha"/>
-                                    <constraint firstItem="hSy-EJ-575" firstAttribute="height" secondItem="MTM-se-gpr" secondAttribute="height" multiplier="0.05" id="Rp4-xM-ce8"/>
-                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="height" secondItem="MTM-se-gpr" secondAttribute="height" multiplier="0.05" id="XLe-Gl-omn"/>
-                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="width" secondItem="MTM-se-gpr" secondAttribute="width" id="p0M-dC-kbJ"/>
+                                    <constraint firstItem="hSy-EJ-575" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="6wP-ye-axn"/>
+                                    <constraint firstItem="grb-yH-AQv" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.35" id="9kX-ph-IFH"/>
+                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="Va3-FS-xf5"/>
+                                    <constraint firstItem="B6j-r2-Vnu" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="VdV-Bj-XAa"/>
+                                    <constraint firstItem="7KA-lF-2I2" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="blU-JM-DBI"/>
+                                    <constraint firstItem="iCA-ro-Tba" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="cQE-wr-QLj"/>
+                                    <constraint firstItem="7KA-lF-2I2" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.2" id="dz4-vm-AMW"/>
+                                    <constraint firstItem="iCA-ro-Tba" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.2" id="h1V-5D-i35"/>
+                                    <constraint firstItem="B6j-r2-Vnu" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.1" id="kSQ-eF-7pJ"/>
+                                    <constraint firstItem="hSy-EJ-575" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.1" id="s85-JE-k3y"/>
+                                    <constraint firstItem="9y0-jM-b6o" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.05" id="uq9-x1-cnj"/>
+                                    <constraint firstItem="grb-yH-AQv" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="yRR-J6-vM3"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.26186487182351342" green="0.5" blue="0.21938697681449604" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1to-9h-QdJ"/>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4H8-VJ-aC8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MTM-se-gpr" secondAttribute="trailing" id="6Ax-tG-RgU"/>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7JU-Wi-OVg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="8Xv-6c-wb6"/>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BSo-4Y-BBd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="CCl-Px-ZFu"/>
-                            <constraint firstAttribute="trailing" secondItem="MTM-se-gpr" secondAttribute="trailing" id="JH4-UM-cJD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" constant="10" id="WHm-TH-vjp"/>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="c9s-4j-NYt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTM-se-gpr" secondAttribute="bottom" id="jaj-oe-bkw"/>
-                            <constraint firstItem="MTM-se-gpr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nvL-Lz-TvZ"/>
+                            <constraint firstItem="gaG-v9-il2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="0p1-6U-RQl"/>
+                            <constraint firstItem="gaG-v9-il2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BGe-wp-tfS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gaG-v9-il2" secondAttribute="bottom" id="G9I-M9-pcC"/>
+                            <constraint firstItem="gaG-v9-il2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="GdR-Tu-9xV"/>
+                            <constraint firstAttribute="trailing" secondItem="gaG-v9-il2" secondAttribute="trailing" id="XPY-H4-hD7"/>
+                            <constraint firstItem="gaG-v9-il2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e62-MT-2rc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cqz-ay-p3Z"/>
+                    <connections>
+                        <outlet property="animal1ImageOutlet" destination="VqF-8D-77w" id="GSx-7v-izT"/>
+                        <outlet property="animal2ImageOutlet" destination="tUL-K3-mn7" id="DdM-5Z-8HE"/>
+                        <outlet property="animal3ImageOutlet" destination="hJC-7x-x0O" id="LzE-ZT-iri"/>
+                        <outlet property="animal4ImageOutlet" destination="avO-5I-ycE" id="tPp-y3-h7a"/>
+                        <outlet property="goToStoreButtonOutlet" destination="hSy-EJ-575" id="SbQ-bb-GDE"/>
+                        <outlet property="mainTotalPointsViewOutlet" destination="B6j-r2-Vnu" id="9qN-3l-vMY"/>
+                        <outlet property="pointMenuTextViewOutlet" destination="grb-yH-AQv" id="T0g-t4-47T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xgs-13-6Yn">
+                    <connections>
+                        <action selector="animal1TapAction:" destination="BYZ-38-t0r" id="4ao-pX-ymy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gW5-WC-gdq">
+                    <connections>
+                        <action selector="animal2TapAction:" destination="BYZ-38-t0r" id="yy9-mU-LYL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WJN-er-qcM">
+                    <connections>
+                        <action selector="animal3TapAction:" destination="BYZ-38-t0r" id="0vZ-VH-BnN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ERG-ZH-w80">
+                    <connections>
+                        <action selector="animal4TapAction:" destination="BYZ-38-t0r" id="iZu-MY-HP8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1055.7251908396945" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
         </scene>
         <!--Store View Controller-->
         <scene sceneID="FMf-r9-ToT">
@@ -111,4 +203,16 @@
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lock Picture" width="360" height="360"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
