@@ -71,11 +71,11 @@
                                             <constraint firstItem="avO-5I-ycE" firstAttribute="width" secondItem="iCA-ro-Tba" secondAttribute="width" multiplier="0.5" id="nmo-jQ-ha2"/>
                                         </constraints>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Animals" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="grb-yH-AQv">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grb-yH-AQv">
                                         <rect key="frame" x="0.0" y="311.33333333333331" width="393" height="239.66666666666669"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total Points: 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-r2-Vnu">
@@ -167,16 +167,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-gf-YJc">
-                                <rect key="frame" x="66" y="59" width="261" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4oe-Up-Gz6">
+                                <rect key="frame" x="0.0" y="133" width="393" height="685"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Store!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-gf-YJc">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total Points: 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xA1-Di-sOb">
+                                        <rect key="frame" x="0.0" y="65.666666666666657" width="393" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-OP-RE1">
+                                        <rect key="frame" x="0.0" y="145.33333333333331" width="393" height="137"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Buy Wolf! (Price: 50 pts)">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn5-e0-2fe">
+                                        <rect key="frame" x="0.0" y="313.66666666666669" width="393" height="137"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Buy Lion! (Price = 500 pts)">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWB-SS-Vyi">
+                                        <rect key="frame" x="0.0" y="482.33333333333337" width="393" height="137"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Buy Tiger! (Price = 2000 pts)">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzy-au-JOT">
+                                        <rect key="frame" x="0.0" y="650.66666666666663" width="393" height="34.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ght-OP-RE1" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="0fi-HB-InI"/>
+                                    <constraint firstItem="jhA-gf-YJc" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="1T0-V2-OPN"/>
+                                    <constraint firstItem="Ght-OP-RE1" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.2" id="91z-2n-GZc"/>
+                                    <constraint firstItem="jhA-gf-YJc" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.05" id="9rR-e8-UcX"/>
+                                    <constraint firstItem="Wzy-au-JOT" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="EVs-SZ-g5N"/>
+                                    <constraint firstItem="Wn5-e0-2fe" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.2" id="Jrr-Rt-e3Z"/>
+                                    <constraint firstItem="xA1-Di-sOb" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.07" id="KDQ-fN-QCW"/>
+                                    <constraint firstItem="Wn5-e0-2fe" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="MAJ-GW-01o"/>
+                                    <constraint firstItem="Wzy-au-JOT" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.05" id="S79-mJ-NxW"/>
+                                    <constraint firstItem="LWB-SS-Vyi" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="aaD-Ox-bEg"/>
+                                    <constraint firstItem="xA1-Di-sOb" firstAttribute="width" secondItem="4oe-Up-Gz6" secondAttribute="width" id="v1o-Z2-Yqu"/>
+                                    <constraint firstItem="LWB-SS-Vyi" firstAttribute="height" secondItem="4oe-Up-Gz6" secondAttribute="height" multiplier="0.2" id="zg8-h9-Keb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FRW-uZ-sLO"/>
                         <color key="backgroundColor" red="0.26186487180000001" green="0.5" blue="0.21938697679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="top" secondItem="FRW-uZ-sLO" secondAttribute="top" constant="30" id="1fd-JQ-kYV"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="leading" secondItem="FRW-uZ-sLO" secondAttribute="leading" id="3zi-Sa-5PO"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="trailing" secondItem="FRW-uZ-sLO" secondAttribute="trailing" id="4K1-cj-wWT"/>
+                            <constraint firstItem="FRW-uZ-sLO" firstAttribute="bottom" secondItem="4oe-Up-Gz6" secondAttribute="bottom" id="Lc7-6I-2fZ"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="bottom" secondItem="FRW-uZ-sLO" secondAttribute="bottom" id="PQD-95-soG"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="leading" secondItem="FRW-uZ-sLO" secondAttribute="leading" id="VTt-gF-g8J"/>
+                            <constraint firstItem="FRW-uZ-sLO" firstAttribute="trailing" secondItem="4oe-Up-Gz6" secondAttribute="trailing" id="eBb-KH-gxD"/>
+                            <constraint firstAttribute="trailing" secondItem="4oe-Up-Gz6" secondAttribute="trailing" id="nHJ-e2-iVM"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="top" secondItem="Ngc-zt-fCv" secondAttribute="top" constant="30" id="o2m-KY-xjc"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="leading" secondItem="FRW-uZ-sLO" secondAttribute="leading" id="obK-6s-nHC"/>
+                            <constraint firstItem="4oe-Up-Gz6" firstAttribute="top" secondItem="FRW-uZ-sLO" secondAttribute="top" constant="30" id="vbt-9B-kTO"/>
+                            <constraint firstItem="FRW-uZ-sLO" firstAttribute="bottom" secondItem="4oe-Up-Gz6" secondAttribute="bottom" id="wVv-y0-xrl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c0P-y2-8TY"/>
                 </viewController>
@@ -207,9 +273,6 @@
         <image name="Lock Picture" width="360" height="360"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

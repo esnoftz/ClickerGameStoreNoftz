@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //pointMenuTextViewOutlet.text = ""
+        pointMenuTextViewOutlet.text = "*These are the point values of the current animals you have!*\n\nFox: 1 point"
         
     }
 
