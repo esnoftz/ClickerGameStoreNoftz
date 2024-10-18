@@ -40,12 +40,35 @@ class ViewController: UIViewController {
     //var totalClickPoints = 0
     
     
+    
+    var defaults = UserDefaults.standard
+    var encoder = JSONEncoder()
+    var decoder = JSONDecoder()
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pointMenuTextViewOutlet.text = "*These are the point values of the current animals you have!*\n\n\nFox: 1 point"
         
         defaultImage = animal4ImageOutlet.image!
+        
+        var pSave = defaults.integer(forKey: "savedPoints")
+        AppData.totalClickPoints = pSave
+        
+        mainTotalPointsViewOutlet.text = "Total Points: \(pSave)"
+        print(AppData.totalClickPoints)
+
+        var wolfBought = defaults.bool(forKey: "purchasedWolf")
+        AppData.wolfPurchased = wolfBought
+        
+        var lionBought = defaults.bool(forKey: "purchasedLion")
+        AppData.lionPurchased = lionBought
+        
+        var tigerBought = defaults.bool(forKey: "purchasedTiger")
+        AppData.tigerPurchased = tigerBought
+        
+        
         
     }
 
@@ -117,6 +140,27 @@ class ViewController: UIViewController {
         mainTotalPointsViewOutlet.text = "Total Points: \(AppData.totalClickPoints)"
         
     }
+    
+    
+    @IBAction func saveAction(_ sender: UIButton) {
+        
+        var pointsSave = AppData.totalClickPoints
+        defaults.set(pointsSave, forKey: "savedPoints")
+        print(AppData.totalClickPoints)
+        
+    
+        defaults.set(lionOn, forKey: "purchasedLion")
+        defaults.set(wolfOn, forKey: "purchasedWolf")
+        defaults.set(tigerOn, forKey: "purchasedTiger")
+        print(lionOn)
+        print(wolfOn)
+        print(tigerOn)
+    }
+    
+    
+    
+    
+    
     
     
 

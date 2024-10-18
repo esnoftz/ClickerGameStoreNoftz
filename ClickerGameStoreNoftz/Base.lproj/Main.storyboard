@@ -49,7 +49,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCA-ro-Tba">
-                                        <rect key="frame" x="0.0" y="173.33333333333331" width="393" height="137"/>
+                                        <rect key="frame" x="0.0" y="173.33333333333326" width="393" height="137"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-7x-x0O">
                                                 <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
@@ -72,21 +72,21 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grb-yH-AQv">
-                                        <rect key="frame" x="0.0" y="311.33333333333331" width="393" height="239.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="311.33333333333326" width="393" height="239.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total Points: 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-r2-Vnu">
-                                        <rect key="frame" x="0.0" y="552" width="393" height="68.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="552" width="393" height="48"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-EJ-575">
-                                        <rect key="frame" x="0.0" y="621.66666666666663" width="393" height="63.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="601" width="393" height="48.666666666666515"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Go to Store!">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
@@ -96,18 +96,30 @@
                                             <segue destination="eaJ-QO-gW6" kind="show" identifier="storeSegue" id="KZg-LX-kkl"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-aE-I6o">
+                                        <rect key="frame" x="0.0" y="650.66666666666697" width="393" height="34.33333333333303"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j96-0A-p10"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="a1W-aE-I6o" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.05" id="1pq-de-Qx8"/>
                                     <constraint firstItem="hSy-EJ-575" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="6wP-ye-axn"/>
                                     <constraint firstItem="grb-yH-AQv" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.35" id="9kX-ph-IFH"/>
+                                    <constraint firstItem="a1W-aE-I6o" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="Ma3-cc-Wd0"/>
                                     <constraint firstItem="9y0-jM-b6o" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="Va3-FS-xf5"/>
                                     <constraint firstItem="B6j-r2-Vnu" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="VdV-Bj-XAa"/>
                                     <constraint firstItem="7KA-lF-2I2" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="blU-JM-DBI"/>
                                     <constraint firstItem="iCA-ro-Tba" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="cQE-wr-QLj"/>
                                     <constraint firstItem="7KA-lF-2I2" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.2" id="dz4-vm-AMW"/>
                                     <constraint firstItem="iCA-ro-Tba" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.2" id="h1V-5D-i35"/>
-                                    <constraint firstItem="B6j-r2-Vnu" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.1" id="kSQ-eF-7pJ"/>
-                                    <constraint firstItem="hSy-EJ-575" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.1" id="s85-JE-k3y"/>
+                                    <constraint firstItem="B6j-r2-Vnu" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.07" id="kSQ-eF-7pJ"/>
                                     <constraint firstItem="9y0-jM-b6o" firstAttribute="height" secondItem="gaG-v9-il2" secondAttribute="height" multiplier="0.05" id="uq9-x1-cnj"/>
                                     <constraint firstItem="grb-yH-AQv" firstAttribute="width" secondItem="gaG-v9-il2" secondAttribute="width" id="yRR-J6-vM3"/>
                                 </constraints>
@@ -299,6 +311,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
