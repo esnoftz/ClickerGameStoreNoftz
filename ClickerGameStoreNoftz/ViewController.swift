@@ -10,6 +10,7 @@ class AppData {
     static var wolfPurchased = false
     static var lionPurchased = false
     static var tigerPurchased = false
+    static var userName = ""
 }
 
 
@@ -67,8 +68,6 @@ class ViewController: UIViewController {
         
         var tigerBought = defaults.bool(forKey: "purchasedTiger")
         AppData.tigerPurchased = tigerBought
-        
-        
         
     }
 

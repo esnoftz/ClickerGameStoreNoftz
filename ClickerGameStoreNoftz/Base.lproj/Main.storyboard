@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0tu-Ah-5WC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OL5-mP-4lG">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-lF-2I2">
-                                        <rect key="frame" x="0.0" y="35.333333333333343" width="393" height="137"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="393" height="136.99999999999997"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fox Image" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-8D-77w">
                                                 <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
@@ -49,7 +49,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCA-ro-Tba">
-                                        <rect key="frame" x="0.0" y="173.33333333333326" width="393" height="137"/>
+                                        <rect key="frame" x="0.0" y="173.33333333333331" width="393" height="137"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock Picture" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-7x-x0O">
                                                 <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="137"/>
@@ -72,7 +72,7 @@
                                         </constraints>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="grb-yH-AQv">
-                                        <rect key="frame" x="0.0" y="311.33333333333326" width="393" height="239.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="311.33333333333331" width="393" height="239.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
@@ -86,7 +86,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-EJ-575">
-                                        <rect key="frame" x="0.0" y="601" width="393" height="48.666666666666515"/>
+                                        <rect key="frame" x="0.0" y="601" width="393" height="48.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Go to Store!">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
@@ -97,7 +97,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1W-aE-I6o">
-                                        <rect key="frame" x="0.0" y="650.66666666666697" width="393" height="34.33333333333303"/>
+                                        <rect key="frame" x="0.0" y="650.66666666666663" width="393" height="34.333333333333371"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
@@ -169,7 +169,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1979.3893129770991" y="3.5211267605633805"/>
         </scene>
         <!--Clicker Store-->
         <scene sceneID="FMf-r9-ToT">
@@ -279,25 +279,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F00-33-5ij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799.2366412213739" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2725.9541984732823" y="3.5211267605633805"/>
+        </scene>
+        <!--Name View Controller-->
+        <scene sceneID="Ovb-u1-YlN">
+            <objects>
+                <viewController id="WRt-rp-MRB" customClass="NameViewController" customModule="ClickerGameStoreNoftz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4n-Gc-Fix">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTI-6Z-hmv">
+                                <rect key="frame" x="57" y="221" width="278" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adb-Db-l1L">
+                                <rect key="frame" x="108" y="276" width="177" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Name">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.46113885310000002" green="0.38959148529999998" blue="0.28726064089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="submitNameAction:" destination="WRt-rp-MRB" eventType="touchUpInside" id="iRp-aL-UXI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrC-co-QcP">
+                                <rect key="frame" x="85" y="519" width="222" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Game">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.46113885310000002" green="0.38959148529999998" blue="0.28726064089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="BbF-9E-ByD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH5-ih-plb">
+                                <rect key="frame" x="57" y="340" width="278" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="whH-6m-70t"/>
+                        <color key="backgroundColor" red="0.26186487180000001" green="0.5" blue="0.21938697679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PUE-dc-SjR"/>
+                    <connections>
+                        <outlet property="nameErrorLabel" destination="hH5-ih-plb" id="TKP-eU-vbx"/>
+                        <outlet property="nameInputTextField" destination="xTI-6Z-hmv" id="99j-z9-4bh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8XW-J5-TOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154.9618320610687" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ICe-oB-U5c">
+        <scene sceneID="wpP-nm-SXa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0tu-Ah-5WC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OL5-mP-4lG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Iv-4j-2W0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S0t-M6-PU9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="odw-j5-U8w"/>
+                        <segue destination="WRt-rp-MRB" kind="relationship" relationship="rootViewController" id="sBn-kj-8HI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hx7-yQ-tpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="knU-Vh-JJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="339.69465648854958" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
