@@ -11,6 +11,9 @@ class AppData {
     static var lionPurchased = false
     static var tigerPurchased = false
     static var userName = ""
+    static var defaults = UserDefaults.standard
+    static var encoder = JSONEncoder()
+    static var decoder = JSONDecoder()
 }
 
 
@@ -31,6 +34,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainTotalPointsViewOutlet: UITextView!
     
     @IBOutlet weak var goToStoreButtonOutlet: UIButton!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     var defaultImage: UIImage!
     
@@ -54,20 +60,22 @@ class ViewController: UIViewController {
         
         defaultImage = animal4ImageOutlet.image!
         
-        var pSave = defaults.integer(forKey: "savedPoints")
+        var pSave = AppData.defaults.integer(forKey: "savedPoints")
         AppData.totalClickPoints = pSave
         
         mainTotalPointsViewOutlet.text = "Total Points: \(pSave)"
         print(AppData.totalClickPoints)
 
-        var wolfBought = defaults.bool(forKey: "purchasedWolf")
+        var wolfBought = AppData.defaults.bool(forKey: "purchasedWolf")
         AppData.wolfPurchased = wolfBought
         
-        var lionBought = defaults.bool(forKey: "purchasedLion")
+        var lionBought = AppData.defaults.bool(forKey: "purchasedLion")
         AppData.lionPurchased = lionBought
         
-        var tigerBought = defaults.bool(forKey: "purchasedTiger")
+        var tigerBought = AppData.defaults.bool(forKey: "purchasedTiger")
         AppData.tigerPurchased = tigerBought
+        
+        nameLabel.text = "Hi \(AppData.userName)!"
         
     }
 
@@ -144,13 +152,13 @@ class ViewController: UIViewController {
     @IBAction func saveAction(_ sender: UIButton) {
         
         var pointsSave = AppData.totalClickPoints
-        defaults.set(pointsSave, forKey: "savedPoints")
+        AppData.defaults.set(pointsSave, forKey: "savedPoints")
         print(AppData.totalClickPoints)
         
     
-        defaults.set(lionOn, forKey: "purchasedLion")
-        defaults.set(wolfOn, forKey: "purchasedWolf")
-        defaults.set(tigerOn, forKey: "purchasedTiger")
+        AppData.defaults.set(lionOn, forKey: "purchasedLion")
+        AppData.defaults.set(wolfOn, forKey: "purchasedWolf")
+        AppData.defaults.set(tigerOn, forKey: "purchasedTiger")
         print(lionOn)
         print(wolfOn)
         print(tigerOn)

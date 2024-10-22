@@ -12,22 +12,24 @@ class NameViewController: UIViewController {
     @IBOutlet weak var nameInputTextField: UITextField!
     
     @IBOutlet weak var nameErrorLabel: UILabel!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        var name = AppData.defaults.string(forKey: "nameOfUser")
+        if let n = name {
+            AppData.userName = n
+        }
     }
     
 
     @IBAction func submitNameAction(_ sender: UIButton) {
-        if nameInputTextField.text == "" {
-            nameErrorLabel.text = "Enter a name!"
+        if nameInputTextField.text != "" {
+            AppData.userName = nameInputTextField.text!
+            AppData.defaults.set(AppData.userName, forKey: "nameOfUser")
+            nameErrorLabel.text = "Name entered!"
         } else {
-            var name = defaults.string(forKey: "nameOfUser")
-            AppData.userName = name
-            
+            nameErrorLabel.text = "Enter a name!"
         }
         
     }
