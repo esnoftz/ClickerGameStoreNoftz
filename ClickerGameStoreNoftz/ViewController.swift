@@ -14,6 +14,7 @@ class AppData {
     static var defaults = UserDefaults.standard
     static var encoder = JSONEncoder()
     static var decoder = JSONDecoder()
+    static var newGame = false
 }
 
 
@@ -101,6 +102,23 @@ class ViewController: UIViewController {
             print("showing tiger")
         }
         
+        
+        if AppData.newGame == true {
+            animal2ImageOutlet.image = UIImage(named: "Lock Picture")
+            animal3ImageOutlet.image = UIImage(named: "Lock Picture")
+            animal4ImageOutlet.image = UIImage(named: "Lock Picture")
+            wolfOn = false
+            lionOn = false
+            tigerOn = false
+            AppData.defaults.set(lionOn, forKey: "purchasedLion")
+            AppData.defaults.set(wolfOn, forKey: "purchasedWolf")
+            AppData.defaults.set(tigerOn, forKey: "purchasedTiger")
+            nameLabel.text = "Hi \(AppData.userName)!"
+            pointMenuTextViewOutlet.text = "*These are the point values of the current animals you have!*\n\n\nFox: 1 point"
+            mainTotalPointsViewOutlet.text = "Total Points: \(AppData.totalClickPoints)"
+            AppData.newGame = false
+
+        }
         
     }
     

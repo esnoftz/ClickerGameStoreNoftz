@@ -35,6 +35,25 @@ class NameViewController: UIViewController {
     }
     
     
+    @IBAction func startNewGameAction(_ sender: UIButton) {
+        AppData.totalClickPoints = 0
+        AppData.defaults.set(AppData.totalClickPoints, forKey: "savedPoints")
+        
+        AppData.wolfPurchased = false
+        AppData.lionPurchased = false
+        AppData.tigerPurchased = false
+
+        AppData.newGame = true
+        
+        if nameInputTextField.text == "" {
+            nameErrorLabel.text = "Enter your name!"
+        } else {
+            AppData.userName = nameInputTextField.text!
+            AppData.defaults.set(AppData.userName, forKey: "nameOfUser")
+            nameErrorLabel.text = "New game started! Click Go to Game!"
+        }
+        
+    }
     
     
     
