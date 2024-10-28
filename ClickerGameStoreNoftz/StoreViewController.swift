@@ -43,6 +43,7 @@ class StoreViewController: UIViewController {
                 AppData.wolfPurchased = true
                 //sender.tintColor = UIColor.red
                 AppData.totalClickPoints -= 50
+                AppData.defaults.set(AppData.totalClickPoints, forKey: "savedPoints")
                 storeTotalPointsTextOutlet.text = "Total Points: \(AppData.totalClickPoints)"
             }
         }
@@ -60,6 +61,7 @@ class StoreViewController: UIViewController {
                 AppData.lionPurchased = true
                 //sender.backgroundColor = UIColor.red
                 AppData.totalClickPoints -= 500
+                AppData.defaults.set(AppData.totalClickPoints, forKey: "savedPoints")
                 storeTotalPointsTextOutlet.text = "Total Points: \(AppData.totalClickPoints)"
             }
         }
@@ -77,6 +79,7 @@ class StoreViewController: UIViewController {
                 AppData.tigerPurchased = true
                 //sender.backgroundColor = UIColor.red
                 AppData.totalClickPoints -= 2000
+                AppData.defaults.set(AppData.totalClickPoints, forKey: "savedPoints")
                 storeTotalPointsTextOutlet.text = "Total Points: \(AppData.totalClickPoints)"
             }
         }
