@@ -379,6 +379,7 @@
                         <outlet property="gamesTableView" destination="3mn-Bw-CgB" id="LdG-YH-zhB"/>
                         <outlet property="nameErrorLabel" destination="hH5-ih-plb" id="TKP-eU-vbx"/>
                         <outlet property="nameInputTextField" destination="xTI-6Z-hmv" id="99j-z9-4bh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gameSegue" id="fHl-t6-xMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XW-J5-TOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -404,6 +405,9 @@
             <point key="canvasLocation" x="339.69465648854958" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fHl-t6-xMr"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Fox Image" width="773" height="1024"/>
         <image name="Lock Picture" width="360" height="360"/>

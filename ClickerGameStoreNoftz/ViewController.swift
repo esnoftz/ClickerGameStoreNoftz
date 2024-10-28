@@ -79,6 +79,8 @@ class ViewController: UIViewController {
         
         nameLabel.text = "Hi \(AppData.userName)!"
         
+        //var tempGames = AppData.defaults.array(forKey: "gamesList") as! [Game]
+        //AppData.games = tempGames
     }
 
     override func viewWillAppear(_ animated: Bool) {
