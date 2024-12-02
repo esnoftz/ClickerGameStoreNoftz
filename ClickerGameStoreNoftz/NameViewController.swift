@@ -35,6 +35,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         nameErrorLabel.text = ""
         nameInputTextField.text = ""
         gamesTableView.reloadData()
+    
     }
     
     @IBAction func submitNameAction(_ sender: UIButton) {
@@ -110,7 +111,16 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        AppData.userName = AppData.games[indexPath.row].name
+        AppData.totalClickPoints = AppData.games[indexPath.row].totalPoints
+        AppData.wolfPurchased = AppData.games[indexPath.row].wolf
+        AppData.lionPurchased = AppData.games[indexPath.row].lion
+        AppData.tigerPurchased = AppData.games[indexPath.row].tiger
+        AppData.newGame = false
+        performSegue(withIdentifier: "gameSegue", sender: self)
+    }
     
     /*
     // MARK: - Navigation
