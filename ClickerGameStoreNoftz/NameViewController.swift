@@ -18,7 +18,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
             
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         gamesTableView.delegate = self
         gamesTableView.dataSource = self
         
@@ -28,6 +28,7 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         gamesTableView.reloadData()
+        print("hello")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +85,29 @@ class NameViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = "\(AppData.games[indexPath.row].name)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.userName = AppData.games[indexPath.row].name
+        AppData.totalClickPoints = AppData.games[indexPath.row].totalPoints
+        AppData.wolfPurchased = AppData.games[indexPath.row].wolf
+        AppData.lionPurchased = AppData.games[indexPath.row].lion
+        AppData.tigerPurchased = AppData.games[indexPath.row].tiger
+        
+        AppData.defaults.set(AppData.lionPurchased, forKey: "purchasedLion")
+        AppData.defaults.set(AppData.wolfPurchased, forKey: "purchasedWolf")
+        AppData.defaults.set(AppData.tigerPurchased, forKey: "purchasedTiger")
+        AppData.defaults.set(AppData.totalClickPoints, forKey: "savedPoints")
+        
+        performSegue(withIdentifier: "resumeGameSegue", sender: nil)
+        
+        print(AppData.userName)
+        print(AppData.totalClickPoints)
+        print(AppData.wolfPurchased)
+        print(AppData.lionPurchased)
+        print(AppData.tigerPurchased)
+
+    }
+    
     
     
     

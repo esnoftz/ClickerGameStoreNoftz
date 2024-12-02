@@ -79,24 +79,39 @@ class ViewController: UIViewController {
         
         nameLabel.text = "Hi \(AppData.userName)!"
         
+        
+        if let allGames = AppData.defaults.data(forKey: "gamesList") {
+
+            // decoding the data stored in blahDogs into objects in a Dog array
+            if let inGames = try? AppData.decoder.decode([Game].self, from: allGames) {
+                AppData.games = inGames
+                
+                for g in AppData.games {
+                    //print(g.totalPoints)
+                }
+                
+            }
+            
+        }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         print("home screen appearing")
         mainTotalPointsViewOutlet.text = "Total Points: \(AppData.totalClickPoints)"
-        if AppData.wolfPurchased == true && wolfOn == false {
+        if AppData.wolfPurchased == true {
             animal2ImageOutlet.image = UIImage(named: "Wolf Image")
             pointMenuTextViewOutlet.text += "\nWolf: 5 points"
             wolfOn = true
         }
         
-        if AppData.lionPurchased == true && lionOn == false {
+        if AppData.lionPurchased == true {
             animal3ImageOutlet.image = UIImage(named: "Lion Image2")
             pointMenuTextViewOutlet.text += "\nLion: 10 points"
             lionOn = true
         }
         
-        if AppData.tigerPurchased == true && tigerOn == false {
+        if AppData.tigerPurchased == true {
             animal4ImageOutlet.image = UIImage(named: "Tiger Image3")
             pointMenuTextViewOutlet.text += "\nTiger: 15 points"
             tigerOn = true
@@ -190,7 +205,27 @@ class ViewController: UIViewController {
         print(wolfOn)
         print(tigerOn)
         
-        AppData.games.append(Game(name: AppData.userName, totalPoints: AppData.totalClickPoints, wolf: AppData.wolfPurchased, lion: AppData.lionPurchased, tiger: AppData.tigerPurchased))
+        var alreadyIn = false
+        for g in AppData.games {
+            if g.name == AppData.userName {
+                g.name = AppData.userName
+                g.totalPoints = AppData.totalClickPoints
+                g.lion = AppData.lionPurchased
+                g.wolf = AppData.wolfPurchased
+                g.tiger = AppData.tigerPurchased
+                alreadyIn = true
+            }
+        }
+        if(alreadyIn == false) {
+            AppData.games.append(Game(name: AppData.userName, totalPoints: AppData.totalClickPoints, wolf: AppData.wolfPurchased, lion: AppData.lionPurchased, tiger: AppData.tigerPurchased))
+        }
+                
+        
+        if let gamesTest = try? AppData.encoder.encode(AppData.games) {    // safe unwrap!
+            AppData.defaults.set(gamesTest, forKey: "gamesList")
+        }
+        
+        
         
     }
     

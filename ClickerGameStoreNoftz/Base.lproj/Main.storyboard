@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OL5-mP-4lG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OL5-mP-4lG">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -379,6 +379,7 @@
                         <outlet property="gamesTableView" destination="3mn-Bw-CgB" id="LdG-YH-zhB"/>
                         <outlet property="nameErrorLabel" destination="hH5-ih-plb" id="TKP-eU-vbx"/>
                         <outlet property="nameInputTextField" destination="xTI-6Z-hmv" id="99j-z9-4bh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="resumeGameSegue" id="hoW-Rn-Y3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XW-J5-TOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -404,6 +405,9 @@
             <point key="canvasLocation" x="339.69465648854958" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hoW-Rn-Y3h"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Fox Image" width="773" height="1024"/>
         <image name="Lock Picture" width="360" height="360"/>
